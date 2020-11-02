@@ -7,22 +7,14 @@ namespace Day6
     class Task2
     { 
 
-        public static string PrintMyName (string name)
+        public static void PrintMyName (string name, string surname)
         {
-
             string nameLetter = name.Substring(0,1);
-            var final = nameLetter;
-            Console.Write($"{final.ToUpper()}.");
-            return final;
+            string sureNameLetter = surname.Substring(0,1);
 
+            Console.WriteLine($"{nameLetter.ToUpper()}. ");
+            Console.Write($"{sureNameLetter.ToUpper() + surname.Substring(1).ToLower()}");
         }
 
-        public static string PrintMySurname(string surename)
-        {
-            string lastName = surename.Substring(0,1);
-            var final = lastName.ToUpper() + surename.Substring(1).ToLower();
-            Console.Write(final);
-            return final;
-        }
     }
 }

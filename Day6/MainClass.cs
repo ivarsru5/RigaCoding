@@ -23,8 +23,7 @@ namespace Day6
                     string sureName = Console.ReadLine();
 
                     Console.WriteLine("Hello Mr/ Mrs: ");
-                    Task2.PrintMyName(name);
-                    Task2.PrintMySurname(sureName);
+                    Task2.PrintMyName(name, sureName);
 
                     break;
                 default:
