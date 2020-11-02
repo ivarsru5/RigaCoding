@@ -72,7 +72,7 @@ namespace Day4
         static void Task3()
         {
             string[] names = { "Janis", "Aivars", "Egars", "Inguss", "Juris", "Agris" };
-            string letter = null;
+            string letter;
 
             Console.WriteLine("Names in array is: ");
             Console.Write(string.Join(",", names));
@@ -80,11 +80,13 @@ namespace Day4
             foreach (string name in names)
             {
                 letter = name.Substring(0,1);
-            }
-
-            if (letter.Equals("J"))
-            {
-                
+                foreach (char silable in letter)
+                {
+                    if (silable.Equals('J'))
+                    {
+                        Console.WriteLine(name);
+                    }
+                }
             }
         }
 
@@ -111,7 +113,10 @@ namespace Day4
             foreach (string name in nameArray)
             {
                 Console.WriteLine(name);
-                reverseArray = nameArray[name];
+            }
+            for (int index = nameArray.Length; index < nameArray.Length; index++)
+            {
+                Console.WriteLine(nameArray[index]);
             }
         }
     }

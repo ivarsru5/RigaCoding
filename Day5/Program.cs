@@ -6,7 +6,7 @@ namespace Day5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int input = Convert.ToInt32(Console.ReadLine());
         }
     }
 }
