@@ -108,7 +108,6 @@ namespace Day4
             string source = Console.ReadLine();
             string[] separetor = { ",", " " }; ;
             string[] nameArray = source.Split(separetor, StringSplitOptions.RemoveEmptyEntries);
-            string[] reverseArray;
 
             foreach (string name in nameArray)
             {
