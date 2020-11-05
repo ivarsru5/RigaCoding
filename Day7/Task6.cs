@@ -15,7 +15,7 @@ namespace Day7
 
             if (firstPart.Length == 6)
             {
-                if (middlePart == "-")
+                if (middlePart.Equals("-"))
                 {
                     if (finalPart.Length == 5)
                     {

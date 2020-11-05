@@ -29,6 +29,14 @@ namespace Day7
                     PrintNameSureName(userName, surename);
                     break;
 
+                case "2":
+                    Console.WriteLine("Please enter your Name: ");
+                    string nameUser = Console.ReadLine();
+                    Console.WriteLine("Please enter your age: ");
+                    string age = Console.ReadLine();
+                    PrintNameAge(nameUser, age);
+                    break;
+
                 case "2.1":
                     Console.WriteLine("Please enter 5 numbers to add them to array and then print them:");
                     
@@ -48,25 +56,26 @@ namespace Day7
                     {
                         strArray[element] = Console.ReadLine();
                     }
-
                     PrintArrayValues(strArray);
                     break;
 
                 case "3":
                     GetNonEmptyArray(blankSpaceArray);
                     break;
+
                 case "4.1":
                     Console.WriteLine("Please enter Your personal ID Number to validate");
                     string idNumber = Console.ReadLine();
                     Task6.ValidatePersonId(idNumber);
                     break;
+
                 default:
                     Console.WriteLine("Please enter walid task Number");
                     break;
             }
             
         }
-
+        //1 uzdevums
         static void PrintNameSureName(string name)
         {
             Console.Write(name);
@@ -76,9 +85,10 @@ namespace Day7
         {
             Console.WriteLine($"Hello Mr/Mrs {name} {surename}");
         }
-
+   
         static void PrintNameAge(string name, string age)
         {
+            Console.WriteLine($"Hello Mr/Mrs {name}");
 
             Console.WriteLine("Please enter your age: ");
             if (age == String.Empty)
@@ -91,7 +101,7 @@ namespace Day7
                 Console.WriteLine($"Users age is: {userAge}");
             }
         }
-
+        //2 udevums
         static void PrintArrayValues(int[] array)
         {
             int index = 0;
@@ -113,7 +123,7 @@ namespace Day7
             }
         }
 
-        //MARK: - task 4
+        //MARK: - task 3
         static string[] blankSpaceArray = { "Jānis", "", "Pēteris", "", "Andris" };
 
         public static string[] GetNonEmptyArray(string[] array)
