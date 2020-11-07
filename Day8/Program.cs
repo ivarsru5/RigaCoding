@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Day8
 {
@@ -6,18 +7,17 @@ namespace Day8
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter how big you want the array.");
-            var lenght = Convert.ToInt32(Console.ReadLine());
-            int[] array = new int[lenght];
+            Console.WriteLine("Please enter number to make array size: ");
+            int lenght = Convert.ToInt32(Console.ReadLine());
 
-            for (int index = 0; index < array.Length; index++)
+            int[] userArray = new int[lenght];
+
+            for (int index = 0; index < userArray.Length; index++)
             {
-                Console.WriteLine("Please enter your arrays element.");
-                array[index] = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"Your arrays number is: {array[index]}");
+                Console.WriteLine("Please enter number to add: ");
+                userArray[index] = Convert.ToInt32(Console.ReadLine());
             }
-
-            Task1.GetOnlySmallValue(array);
+            Console.WriteLine(String.Join(",", Task1.GetOnlySmallValue(userArray)));
         }
     }
 }

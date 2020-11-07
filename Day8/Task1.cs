@@ -7,19 +7,11 @@ namespace Day8
 {
     class Task1
     {
-        private static int[] correctArray;
         
         public static int[] GetOnlySmallValue(int[] userArray)
         {
-            int[] correctArray;
-            foreach (int element in userArray)
-            {
-                if (element < 5)
-                {
-                    correctArray = new int[] { element };
-                }
-            }
-            return correctArray;
+           Console.WriteLine(userArray.Where(num => num < 5).ToArray());
+            return userArray;
         }
     }
 }
